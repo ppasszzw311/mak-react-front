@@ -19,7 +19,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://net-api.zeabur.internal:8080',//'https://mak-net.zeabur.app',
+        target: 'https://mak-net.zeabur.app',//'https://mak-net.zeabur.app',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '')
