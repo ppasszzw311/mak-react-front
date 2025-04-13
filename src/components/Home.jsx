@@ -17,7 +17,7 @@ const Home = () => {
     },[])
 
     const handleClick = () => {
-        axios.get("http://www.net-api.zeabur.internal:8080/weatherforecast")
+        axios.get("https://www.net-api.zeabur.internal:8080/weatherforecast")
         .then((res) => {
             setData(res.data);
             console.log(res);
