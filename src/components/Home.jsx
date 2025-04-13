@@ -6,7 +6,7 @@ const Home = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        axios.get("https://net-api.zeabur.internal:8080/weatherforecast")
+        axios.get("mak-web.zeabur.app/weatherforecast")
         .then((res) => {
             setData(res.data);
             console.log(res);
