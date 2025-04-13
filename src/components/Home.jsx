@@ -15,6 +15,17 @@ const Home = () => {
             console.log(err);
         })
     },[])
+
+    const handleClick = () => {
+        axios.get("http://www.net-api.zeabur.internal:8080/weatherforecast")
+        .then((res) => {
+            setData(res.data);
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }
     return (
         <>
             <div>首頁</div>
@@ -31,6 +42,7 @@ const Home = () => {
                 ) : 
                 <div>沒有資料</div>
             }
+            <button onClick={handleClick}>點擊</button>
         </>
     )
 }
