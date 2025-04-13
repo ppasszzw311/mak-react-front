@@ -2,11 +2,14 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+
+const API_URL = import.meta.env.VITE_API_URL;
+
 const Home = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        axios.get("https://www.mak-web.zeabur.app/weatherforecast")
+        axios.get(`${API_URL}/weatherforecast`)
         .then((res) => {
             setData(res.data);
             console.log(res);
@@ -17,7 +20,7 @@ const Home = () => {
     },[])
 
     const handleClick = () => {
-        axios.get("https://www.net-api.zeabur.internal:8080/weatherforecast")
+        axios.get(`${API_URL}/weatherforecast`)
         .then((res) => {
             setData(res.data);
             console.log(res);
