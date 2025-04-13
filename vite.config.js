@@ -15,15 +15,4 @@ export default defineConfig({
     include: /src\/.*\.jsx?$/,
     exclude: [],
   },
-  // 配置代理
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://mak-net.zeabur.app',//'https://mak-net.zeabur.app',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  },
 })
