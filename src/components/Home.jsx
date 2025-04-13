@@ -18,7 +18,7 @@ const Home = () => {
         <>
             <div>首頁</div>
             {
-                data ? 
+                data && Array.isArray(data) ? 
                 (
                     data.map((item, index) => {
                         return (
