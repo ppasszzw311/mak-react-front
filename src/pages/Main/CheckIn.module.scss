@@ -1,0 +1,53 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.userInfo {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+
+  p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+}
+
+.status {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.checkInStatus {
+  p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+}
+
+.error {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+} 

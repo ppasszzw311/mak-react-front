@@ -1,6 +1,9 @@
-/* 先重置所有樣式 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 全局樣式 */
+
+/* 引用 reset.css */
+@import './reset.css';
+
+/* 設定字體 */
+body {
+    font-family: 'Arial', sans-serif;
 }

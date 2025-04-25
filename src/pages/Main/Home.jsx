@@ -1,6 +1,7 @@
 import Home from "@/components/Home";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import Button from "@/components/Button/Button";
 
 const HomePage = () => {
     return (
@@ -18,6 +19,8 @@ const HomePage = () => {
             <div>
                 <Link to="/admin/dashboard">後台管理</Link>
             </div>
+
+            <Button>按鈕</Button>
         </Fragment>
     )
 }
