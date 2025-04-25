@@ -1,7 +1,8 @@
 // 登入頁面
 import React, { useState } from 'react';
 import { loginPost } from "@/api/login";
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -36,12 +37,16 @@ const Login = () => {
     return (
         <>
             <div>
+            <h1>登入</h1>
                 <label htmlFor="username">帳號</label>
                 <input type="text" id="username" value={login.userName} onChange={handleChange}/>
                 <label htmlFor="password">密碼</label>
                 <input type="password" id="password" value={login.password} onChange={handleChange}/>
-                <button onClick={handleClick}>登入</button>
+                
             </div>
+            <Link to="/register">註冊</Link>
+            <button onClick={handleClick}>登入</button>
+
         </>
     )
 }
