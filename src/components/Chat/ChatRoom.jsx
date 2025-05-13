@@ -36,6 +36,8 @@ const ChatRoom = () => {
     }, [connection]);
 
     const sendMessage = () => {
+        console.log(user, message);
+        console.log(送出簡訊);
         if (connection && connection.state === signalR.HubConnectionState.Connected) {
             try {
                 connection.invoke("SendMessage", user, message);
@@ -46,12 +48,20 @@ const ChatRoom = () => {
         }
     };
 
+    const handleUserChange = (e) => {
+        setUser(e.target.value);
+    }
+
+    const handleMessageChange = (e) => {
+        setMessage(e.target.value);
+    }
+
     return (
         <div>
             <h2>聊天室</h2>
-            <input placeholder="你的姓名" value={user} onChange={(e) = setUser(e.target.value)} />
+            <input placeholder="你的姓名" value={user} onChange={handleUserChange} />
 
-            <input placeholder="說說話" value={message} onChange={(e) => setMessage(e.target.value)} />
+            <input placeholder="說說話" value={message} onChange={handleMessageChange} />
 
             <button onClick={sendMessage}>送出</button>
 
