@@ -37,7 +37,7 @@ const ChatRoom = () => {
 
     const sendMessage = () => {
         console.log(user, message);
-        console.log(送出簡訊);
+        console.log('送出簡訊');
         if (connection && connection.state === signalR.HubConnectionState.Connected) {
             try {
                 connection.invoke("SendMessage", user, message);
