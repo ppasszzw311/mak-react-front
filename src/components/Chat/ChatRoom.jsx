@@ -11,7 +11,7 @@ const ChatRoom = () => {
     useEffect(() => {
         const API_URL = import.meta.env.VITE_API_URL;
         const newConnection = new signalR.HubConnectionBuilder()
-            .withUrl(`${API_URL}/charhub`)
+            .withUrl(`${API_URL}/chathub`)
             .withAutomaticReconnect()
             .build();
 
