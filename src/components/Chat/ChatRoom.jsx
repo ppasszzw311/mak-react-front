@@ -27,6 +27,12 @@ const ChatRoom = () => {
                     connection.on("ReceiveMessage", (user, message) => {
                         setMessages((prevMessages) => [...prevMessages, { user, message }]);
                     });
+
+                    // 監聽資料庫異動的東西
+                    connection.on("ReceiveDatabaseChange", (user, message) => {
+                        console.log(user, message)
+                        setMessages((prevMessages) => [...prevMessages, { user, message }]);
+                    });
                 })
                 .catch((err) => {
                     console.error("Error connecting to chat hub:", err);
