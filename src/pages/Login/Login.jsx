@@ -1,10 +1,11 @@
 import Login from "@/components/Login";
+import styles from "./Login.module.scss"
 
 const LoginPage = () => {
     return (
-        <>
-            <Login />
-        </>
+        <div className={`${styles.wrapper}`}>
+            <Login/>
+        </div>
     )
 }
 
